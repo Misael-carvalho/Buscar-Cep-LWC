@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Consulta de CEP">
+        <div class="slds-m-around_medium"> 
+            <lightning-input 
+                label="Digite o CEP" 
+                type="text" value={cep} 
+                onchange={handleInputChange}
+                maxlength="11"
+                pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}"
+                message-when-pattern-mismatch="Formato inválido de CEP. Use o formato: 00.000-000"
+                placeholder="00.000-000"
+            ></lightning-input>
+            <div class="slds-m-vertical_small" style="text-align:right;">
+                <lightning-button label="Pesquisar" onclick={handleSearch}></lightning-button>
+            </div>
+        </div>
+        <template if:true={showResult}>
+            <div class="slds-m-around_medium">
+                <p>CEP encontrado:</p>
+                <p>{result.logradouro}, {result.bairro}, {result.localidade} - {result.uf}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
