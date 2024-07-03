@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>CepLookupController</members>
+		<members>CepLookupController_Test</members>
+		<members>EnderecoVO</members>
+		<members>MockHttpResponseGenerator</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>cepLookup</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<version>60.0</version>
+</Package>
