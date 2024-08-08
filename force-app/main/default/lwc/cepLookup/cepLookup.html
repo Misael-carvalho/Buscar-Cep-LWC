@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Consulta de CEP">
+        <div class="slds-m-around_medium"> 
+            <lightning-input 
+                label="Digite o CEP" 
+                type="text" value={cep} 
+                onchange={handleInputChange}
+                maxlength="10"
+                pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}"
+                message-when-pattern-mismatch="Formato inválido de CEP. Use o formato: 00.000-000"
+                placeholder="00.000-000"
+            ></lightning-input>
+            <lightning-input label="Rua" type="text" value={logradouro} name="logradouro" onchange={handleChangeAddress} disabled={readonly}></lightning-input>
+            <lightning-input label="Bairro" type="text" value={bairro} name="bairro" onchange={handleChangeAddress} disabled={readonly}></lightning-input>
+            <lightning-input label="Cidade" type="text" value={localidade} name="localidade" onchange={handleChangeAddress} disabled={readonly}></lightning-input>
+            <lightning-input label="Estado" type="text" value={uf} name="uf" onchange={handleChangeAddress} disabled={readonly}></lightning-input>
+            <lightning-input label="Complemento" type="text" value={complemento} name="complemento" onchange={handleChangeAddress}></lightning-input>
+            <lightning-input label="Número" type="text" value={numero} name="numero" onchange={handleChangeAddress}></lightning-input>
+        </div>
+        <div class="slds-m-around_small" style="text-align:right;">
+            <lightning-button label="Salvar" onclick={saveAddress}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

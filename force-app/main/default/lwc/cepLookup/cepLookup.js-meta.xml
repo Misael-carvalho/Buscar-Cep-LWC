@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<masterLabel>Buscar Cep</masterLabel>
+	<targets>
+		<target>lightning__RecordPage</target>
+		<target>lightning__FlowScreen</target>
+	</targets>
+	<targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId" type="String" ></property>
+            <property name="cep" type="String" ></property>
+            <property name="uf" type="String" ></property>
+            <property name="bairro" type="String" ></property>
+            <property name="logradouro" type="String" ></property>
+            <property name="localidade" type="String" ></property>
+            <property name="complemento" type="String" ></property>
+            <property name="numero" type="String" ></property>
+            <property name="flow" type="Boolean" ></property>
+            <property name="NameFlow" type="String" ></property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
