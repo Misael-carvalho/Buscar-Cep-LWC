@@ -4,7 +4,21 @@
 	<isExposed>true</isExposed>
 	<masterLabel>Buscar Cep</masterLabel>
 	<targets>
-		<target>lightning__AppPage</target>
-		<target>lightning__HomePage</target>
+		<target>lightning__RecordPage</target>
+		<target>lightning__FlowScreen</target>
 	</targets>
+	<targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="recordId" type="String" ></property>
+            <property name="cep" type="String" ></property>
+            <property name="uf" type="String" ></property>
+            <property name="bairro" type="String" ></property>
+            <property name="logradouro" type="String" ></property>
+            <property name="localidade" type="String" ></property>
+            <property name="complemento" type="String" ></property>
+            <property name="numero" type="String" ></property>
+            <property name="flow" type="Boolean" ></property>
+            <property name="NameFlow" type="String" ></property>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
